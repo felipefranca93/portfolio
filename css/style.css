@@ -6,8 +6,46 @@
 html{
     padding: 0;
     margin: 0;
+    color: white;
 }
 
 body{
-    background-color: #000000;
+    background-color: rgba(12, 50, 85, 0.8);
+    display: grid;
+}
+
+header{
+    text-align: center;
+    background-color: rgba(12, 50, 85, 0.8);
+}
+
+footer{
+    color: seashell;
+}
+
+.menu{
+    font-family: Righteous;
+    src: url(../assets/fonts/Righteous/Righteous-Regular.ttf);
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu li a{
+    color: white;
+    text-decoration: none;
+}
+
+.menu li a:hover{
+    color: rgb(47, 110, 192);
+}
+
+.container{
+    display: grid;
+    grid-template-rows: auto;
+}
+
+.about{
+    text-align: left;
 }
