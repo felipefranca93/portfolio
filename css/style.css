@@ -1,0 +1,190 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+/* Fonts Google begin */
+
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(../assets/fonts/Roboto/Roboto-Light.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(../assets/fonts/Roboto/Roboto-Bold.ttf);
+}
+
+/* Fonts Google end */
+
+/* RGB Effect */
+.rgb-effect{ 
+    height: 1%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(124deg, #ff2400, #e81d1d, #00ff2a, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+    background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 12s ease infinite;
+  -z-animation: rainbow 12s ease infinite;
+  -o-animation: rainbow 12s ease infinite;
+    animation: rainbow 12s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+/* RGB Effect End */
+
+html{
+    padding: 0;
+    margin: 0;
+    background-color: #000000;
+}
+
+header{
+    background: rgb(0, 0, 17);
+    padding-bottom: 15px;
+    font-family: "Roboto-Bold";
+    
+}
+
+header ul{
+   padding-top: 10px;   
+}
+
+header ul li .nav-link{
+    color: #FFFFFF;
+}
+
+header ul li .nav-link:hover{
+    color: #40b3ff;
+}
+
+header ul li .active{
+    color: #40b3ff;
+}
+
+body{
+    font-family: "Roboto-Light";
+}
+
+.container-title{
+    padding: 25px 25px;
+    background-color: #000000;
+    text-align: center;
+    font-family: "Roboto-Light";
+}
+
+.container-title h2{
+    color: rgb(255, 255, 255);
+    padding-left: 25px;
+}
+
+.container-title h3{
+    color: rgb(255, 255, 255);
+    padding-left: 28px;
+}
+
+.container-skills{
+    padding: 25px 25px;
+    background-color: #000000;
+    text-align: center;
+    font-family: "Roboto-Light";
+}
+
+.container-skills h2{
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+
+.container-skills h3{
+    color: rgb(255, 255, 255);
+    margin-bottom: 25px;
+}
+
+/* Body Icons */
+.fa-html5{
+    color: #ff5120;
+}
+
+.fa-css3-alt{
+    color: rgb(0, 162, 255);
+}
+
+.fa-js-square{
+    color: yellow;
+}
+
+.fa-angular{
+    color: rgb(255, 44, 44);
+}
+
+.fa-bootstrap{
+    color: rgb(153, 0, 255);
+}
+
+.fa-aws{
+    color: yellow;
+}
+
+.typescript-logo{
+    background: url("../assets/images/icons/typescript-logo.svg") no-repeat;
+    color: rgb(0, 162, 255);
+    width: 80px;
+    height: 80px;
+    margin-left: 45px;
+    border-radius: 10%;
+
+}
+
+/* Body Icons End*/
+
+
+/* Footer Begin */
+
+.social-icons i{
+    padding: 15px 5px 0px 5px;
+}
+
+.fa-github{
+    transition: ease-out;
+    transition-duration: 0.5s;
+    color: #FFFFFF;
+}
+
+.fa-github:hover{
+    transition: ease-out;
+    transition-duration: 0.5s;
+    color: #000000
+}
+
+.fa-linkedin{
+    transition: ease-out;
+    transition-duration: 0.5s;
+    color: #FFFFFF;
+}
+
+.fa-linkedin:hover{
+    transition: ease-out;
+    transition-duration: 0.5s;
+    color: #2867b2;
+}
+
+/* Footer end */
