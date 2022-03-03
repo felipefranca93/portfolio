@@ -1,0 +1,28 @@
+on:
+  push:
+    branches:
+      - "master"
+
+jobs:
+  BUILD:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Docker Build
+        uses: docker/build-push-action@v2.7.0
+        with:
+          context: .
+          file: /.Dockerfile
+  CD:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build
+
+
+        
+          
