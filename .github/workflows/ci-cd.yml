@@ -17,9 +17,9 @@ jobs:
           file: ./dockerfile
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
-          branch: github-pages
+          branch: gh-pages
           folder: build
 
         
