@@ -1,0 +1,505 @@
+:root {
+    color-scheme: dark;
+    --night: #07172e;
+    --night-soft: #102b49;
+    --ice: #e8f5f4;
+    --ice-muted: #a9c5d3;
+    --cyan: #75d6df;
+    --teal: #54b9b6;
+    --coral: #e97869;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-width: 320px;
+    min-height: 100%;
+    background: var(--night);
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    margin: 0;
+    color: var(--ice);
+    background: linear-gradient(145deg, #07172e 0%, #0b203b 54%, #102b49 100%);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.error-page {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 22px clamp(22px, 5vw, 72px) 42px;
+}
+
+.error-header {
+    display: flex;
+    width: min(100%, 1320px);
+    min-height: 56px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    font-weight: 650;
+}
+
+.brand-mark {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border: 1px solid rgba(117, 214, 223, 0.48);
+    border-radius: 50%;
+    color: var(--cyan);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+.language-picker {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+}
+
+.language-picker::after {
+    position: absolute;
+    top: 8px;
+    right: 6px;
+    width: 6px;
+    height: 6px;
+    border-right: 1.5px solid var(--ice-muted);
+    border-bottom: 1.5px solid var(--ice-muted);
+    content: "";
+    pointer-events: none;
+    transform: rotate(45deg);
+}
+
+.language-picker select {
+    min-width: 0;
+    padding: 4px 22px 4px 4px;
+    border: 0;
+    border-radius: 0;
+    color: var(--ice);
+    background: transparent;
+    font: inherit;
+    font-weight: 650;
+    cursor: pointer;
+    appearance: none;
+}
+
+.language-picker select option {
+    color: var(--ice);
+    background-color: var(--night-soft);
+}
+
+.language-picker select:focus-visible,
+.error-actions a:focus-visible,
+.brand:focus-visible {
+    outline: 3px solid var(--cyan);
+    outline-offset: 4px;
+}
+
+.error-main {
+    display: grid;
+    width: min(100%, 1320px);
+    flex: 1;
+    grid-template-columns: minmax(290px, 0.78fr) minmax(420px, 1.22fr);
+    align-items: center;
+    gap: clamp(32px, 6vw, 88px);
+    margin: 0 auto;
+    padding: 34px 0 20px;
+}
+
+.error-copy {
+    max-width: 500px;
+    padding-bottom: 10px;
+}
+
+.error-kicker {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin: 0 0 22px;
+    color: var(--cyan);
+    font-size: 0.74rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+}
+
+.kicker-rule {
+    display: inline-block;
+    width: 28px;
+    height: 2px;
+    background: var(--coral);
+}
+
+.error-copy h1 {
+    max-width: 520px;
+    margin: 0 0 15px;
+    color: var(--ice);
+    font-size: 3.15rem;
+    font-weight: 720;
+    letter-spacing: 0;
+    line-height: 1.1;
+}
+
+.error-subtitle {
+    margin: 0 0 15px;
+    color: var(--cyan);
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.error-description {
+    max-width: 440px;
+    margin: 0;
+    color: var(--ice-muted);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+
+.error-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 14px 22px;
+    margin-top: 30px;
+}
+
+.error-actions a {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 0.92rem;
+    font-weight: 650;
+    transition: background-color 180ms ease, color 180ms ease, transform 180ms ease;
+}
+
+.action-primary {
+    padding: 0 19px;
+    color: #07172e;
+    background: var(--cyan);
+}
+
+.action-primary:hover {
+    background: #a2edf0;
+    transform: translateY(-2px);
+}
+
+.last-known {
+    margin: 34px 0 0;
+    color: #829eb3;
+    font-size: 0.8rem;
+}
+
+.expedition-scene {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    margin: 0;
+}
+
+.expedition-scene svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: visible;
+    border: 1px solid rgba(164, 220, 230, 0.12);
+    border-radius: 10px;
+    background: var(--night);
+    box-shadow: 0 30px 80px rgba(0, 7, 20, 0.32);
+}
+
+.scene-caption {
+    margin-top: 11px;
+    color: #849fb2;
+    font-size: 0.78rem;
+    font-style: italic;
+    text-align: right;
+}
+
+.aurora-band {
+    transform-box: fill-box;
+    transform-origin: center;
+}
+
+.aurora-back {
+    animation: auroraFlow 17s ease-in-out infinite alternate;
+}
+
+.aurora-front {
+    animation: auroraFlow 21s ease-in-out -7s infinite alternate-reverse;
+}
+
+.moon-aura {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: moonPulse 5.5s ease-in-out infinite;
+}
+
+.star {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: starShimmer 3.6s ease-in-out infinite;
+}
+
+.star-b,
+.star-e {
+    animation-delay: 0.8s;
+}
+
+.star-c,
+.star-f {
+    animation-delay: 1.6s;
+}
+
+.star-d,
+.star-g {
+    animation-delay: 2.2s;
+}
+
+.search-beam {
+    transform-box: fill-box;
+    transform-origin: left center;
+    animation: scan 5s ease-in-out infinite alternate;
+}
+
+.longship {
+    transform-box: view-box;
+    transform-origin: 380px 350px;
+    animation: shipDrift 4.8s ease-in-out infinite;
+}
+
+.wave,
+.foreground-wave {
+    animation: waveTravel 7s ease-in-out infinite alternate;
+}
+
+.wave-two {
+    animation-delay: -3s;
+    animation-duration: 9s;
+}
+
+.map {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: mapTilt 4s ease-in-out infinite;
+}
+
+.ship-lantern-glow {
+    animation: lanternGlow 3s ease-in-out infinite;
+}
+
+@keyframes auroraFlow {
+    from {
+        transform: translate(-9px, 3px) scaleX(0.98);
+        opacity: 0.55;
+    }
+    to {
+        transform: translate(11px, -6px) scaleX(1.03);
+        opacity: 0.94;
+    }
+}
+
+@keyframes moonPulse {
+    0%, 100% {
+        opacity: 0.65;
+        transform: scale(0.96);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+}
+
+@keyframes starShimmer {
+    0%, 100% {
+        opacity: 0.4;
+        transform: scale(0.82);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.35);
+    }
+}
+
+@keyframes scan {
+    from {
+        opacity: 0.12;
+        transform: rotate(-1deg);
+    }
+    to {
+        opacity: 0.55;
+        transform: rotate(1.5deg);
+    }
+}
+
+@keyframes shipDrift {
+    0%, 100% {
+        transform: translateY(2px) rotate(-0.4deg);
+    }
+    50% {
+        transform: translateY(-5px) rotate(0.4deg);
+    }
+}
+
+@keyframes waveTravel {
+    from {
+        transform: translateX(-8px);
+    }
+    to {
+        transform: translateX(11px);
+    }
+}
+
+@keyframes mapTilt {
+    0%, 100% {
+        transform: rotate(-2deg);
+    }
+    50% {
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes lanternGlow {
+    0%, 100% {
+        opacity: 0.16;
+    }
+    50% {
+        opacity: 0.38;
+    }
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    clip-path: inset(50%);
+}
+
+@media (max-width: 980px) {
+    .error-main {
+        grid-template-columns: minmax(260px, 0.8fr) minmax(360px, 1.2fr);
+        gap: 32px;
+    }
+
+    .error-copy h1 {
+        font-size: 2.8rem;
+    }
+}
+
+@media (max-width: 760px) {
+    .error-page {
+        padding: 16px 24px 32px;
+    }
+
+    .error-main {
+        max-width: 620px;
+        grid-template-columns: 1fr;
+        gap: 34px;
+        padding-top: 52px;
+    }
+
+    .error-copy {
+        max-width: 560px;
+    }
+
+    .error-copy h1 {
+        max-width: 500px;
+        font-size: 2.7rem;
+    }
+
+    .error-description {
+        max-width: 520px;
+    }
+
+    .expedition-scene {
+        width: min(100%, 620px);
+        justify-self: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .error-page {
+        padding: 12px 18px 26px;
+    }
+
+    .brand {
+        gap: 9px;
+        font-size: 0.9rem;
+    }
+
+    .brand-mark {
+        width: 34px;
+        height: 34px;
+    }
+
+    .error-main {
+        gap: 28px;
+        padding-top: 42px;
+    }
+
+    .error-kicker {
+        margin-bottom: 17px;
+        font-size: 0.66rem;
+    }
+
+    .error-copy h1 {
+        margin-bottom: 17px;
+        font-size: 2.35rem;
+    }
+
+    .error-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .error-description {
+        font-size: 1rem;
+    }
+
+    .error-actions {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 22px;
+    }
+
+    .last-known {
+        margin-top: 22px;
+    }
+
+    .scene-caption {
+        font-size: 0.7rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+}

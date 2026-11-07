@@ -1,9 +1,10 @@
-FROM nginx:1.29.4-alpine3.23
+FROM nginx:1.31.8-alpine
 
-WORKDIR /www/
+#WORKDIR /usr/share/nginx/html
 
-COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
-COPY /www/ /www
+COPY /nginx/nginx.conf /etc/nginx/nginx.conf
+
+COPY /www/ /usr/share/nginx/html
 
 EXPOSE 80
 
