@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felipe França - Engenheiro DevOps & SRE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link nav-active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">Sobre</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link">Habilidades</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#credentials" class="nav-link" data-pt="Certificações" data-en="Certifications" data-es="Certificaciones">Certificações</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contato</a>
+                </li>
+            </ul>
+
+            <div class="navbar-controls">
+                <!-- Language Selector -->
+                <div class="language-selector">
+                    <select id="languageSelect" class="language-dropdown">
+                        <option value="pt">PT</option>
+                        <option value="en">EN</option>
+                        <option value="es">ES</option>
+                    </select>
+                </div>
+
+                <!-- Dark Mode Toggle -->
+                <button class="dark-mode-toggle" id="darkModeToggle">
+                    <span class="toggle-icon">🌙</span>
+                </button>
+            </div>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title" data-pt="Olá, sou Felipe França" data-en="Hi, I'm Felipe França" data-es="Hola, soy Felipe França">
+                    Olá, sou Felipe França
+                </h1>
+                <p class="hero-subtitle" data-pt="Engenheiro DevOps & SRE | Infraestrutura & Confiabilidade" data-en="DevOps & SRE Engineer | Infrastructure & Reliability" data-es="Ingeniero DevOps & SRE | Infraestructura y Confiabilidad">
+                    Engenheiro DevOps & SRE | Infraestrutura & Confiabilidade
+                </p>
+                <p class="hero-description" data-pt="Especialista em infraestrutura, automação e confiabilidade de sistemas. Otimizo pipelines de deployment, gerencio ambientes em produção e garanto a continuidade dos serviços." data-en="Infrastructure specialist, automation and systems reliability expert. I optimize deployment pipelines, manage production environments and ensure service continuity." data-es="Especialista en infraestructura, automatización y confiabilidad de sistemas. Optimizo pipelines de implementación, gestiono entornos de producción y garantizo la continuidad de los servicios.">
+                    Especialista em infraestrutura, automação e confiabilidade de sistemas. Otimizo pipelines de deployment, gerencio ambientes em produção e garanto a continuidade dos serviços.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#credentials" class="btn btn-primary" data-pt="Ver Certificações" data-en="View Certifications" data-es="Ver Certificaciones">Ver Certificações</a>
+                    <a href="#contact" class="btn btn-secondary" data-pt="Conecte-se Comigo" data-en="Connect With Me" data-es="Conéctate Conmigo">Conecte-se Comigo</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="night-coder-scene" role="img" aria-label="Dois pinguins pescando juntos em um lago congelado sob a lua e a aurora boreal">
+                    <svg viewBox="0 0 640 480" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                        <defs>
+                            <linearGradient id="sky-gradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#07142d" />
+                                <stop offset="1" stop-color="#123658" />
+                            </linearGradient>
+                            <linearGradient id="aurora-gradient" x1="0" y1="0" x2="1" y2="0">
+                                <stop offset="0" stop-color="#47c8ff" stop-opacity="0.08" />
+                                <stop offset="0.45" stop-color="#5edcff" stop-opacity="0.88" />
+                                <stop offset="1" stop-color="#4f8dff" stop-opacity="0.12" />
+                            </linearGradient>
+                            <linearGradient id="ice-floor-gradient" x1="0" y1="0" x2="0" y2="1">
+                                <stop offset="0" stop-color="#b5e5f1" />
+                                <stop offset="0.45" stop-color="#729fc2" />
+                                <stop offset="1" stop-color="#29476c" />
+                            </linearGradient>
+                            <linearGradient id="igloo-gradient" x1="0" y1="0" x2="0.8" y2="1">
+                                <stop offset="0" stop-color="#e8fbff" />
+                                <stop offset="0.7" stop-color="#a9d8e9" />
+                                <stop offset="1" stop-color="#6c9ebd" />
+                            </linearGradient>
+                            <radialGradient id="igloo-light">
+                                <stop offset="0" stop-color="#f9dca4" stop-opacity="0.85" />
+                                <stop offset="1" stop-color="#ffc978" stop-opacity="0" />
+                            </linearGradient>
+                            <radialGradient id="moon-gradient">
+                                <stop offset="0" stop-color="#dff7ff" stop-opacity="0.45" />
+                                <stop offset="1" stop-color="#79cfff" stop-opacity="0" />
+                            </radialGradient>
+                            <filter id="aurora-blur" x="-30%" y="-60%" width="160%" height="220%">
+                                <feGaussianBlur stdDeviation="13" />
+                            </filter>
+                        </defs>
+
+                        <rect width="640" height="480" fill="url(#sky-gradient)" />
+                        <circle class="moon-halo" cx="535" cy="89" r="103" fill="url(#moon-gradient)" />
+                        <path class="aurora-ribbon aurora-ribbon-back" d="M-30 202C95 96 186 216 306 132S506 101 687 52" fill="none" stroke="url(#aurora-gradient)" stroke-width="47" filter="url(#aurora-blur)" />
+                        <path class="aurora-ribbon aurora-ribbon-front" d="M-35 247C90 166 188 269 321 182S526 151 685 103" fill="none" stroke="url(#aurora-gradient)" stroke-width="29" filter="url(#aurora-blur)" />
+                        <g fill="#d5f3ff">
+                            <circle class="star star-1" cx="44" cy="62" r="1.7" />
+                            <circle class="star star-2" cx="104" cy="121" r="1.3" />
+                            <circle class="star star-3" cx="159" cy="48" r="1.5" />
+                            <circle class="star star-4" cx="223" cy="91" r="1.2" />
+                            <circle class="star star-5" cx="276" cy="56" r="1.7" />
+                            <circle class="star star-6" cx="353" cy="80" r="1.1" />
+                            <circle class="star star-7" cx="411" cy="45" r="1.4" />
+                            <circle class="star star-8" cx="599" cy="156" r="1.4" />
+                            <circle class="star star-9" cx="76" cy="196" r="1.2" />
+                            <circle class="star star-10" cx="184" cy="226" r="1.6" />
+                            <circle class="star star-11" cx="548" cy="192" r="1.2" />
+                            <circle class="star star-12" cx="590" cy="271" r="1.6" />
+                            <circle class="star star-3" cx="314" cy="112" r="1.1" />
+                            <circle class="star star-8" cx="476" cy="61" r="1.2" />
+                        </g>
+                        <circle cx="535" cy="89" r="37" fill="#e3f6ff" />
+                        <circle cx="523" cy="79" r="5" fill="#c6e7f5" opacity="0.75" />
+                        <circle cx="547" cy="101" r="6" fill="#c6e7f5" opacity="0.58" />
+                        <circle cx="551" cy="73" r="3" fill="#c6e7f5" opacity="0.7" />
+                        <path d="M0 369c80-37 153-24 220-38 76-16 147 7 220-10 82-20 137-33 200-6v165H0z" fill="#183553" opacity="0.76" />
+                        <path d="M0 392c91-34 180-13 270-20 104-8 174-27 370-7v123H0z" fill="url(#ice-floor-gradient)" />
+                        <path d="M0 414c120-17 204 14 320-1 116-15 209-9 320 5v62H0z" fill="#d5f2f7" opacity="0.68" />
+                        <path d="M28 433c74-13 130-8 194 0m260-18c47-5 81-3 120 4" fill="none" stroke="#f1ffff" stroke-width="3" stroke-linecap="round" opacity="0.56" />
+
+                        <g class="igloo">
+                            <ellipse cx="164" cy="389" rx="110" ry="17" fill="#a6d9eb" opacity="0.48" />
+                            <path d="M75 382a89 83 0 0 1 178 0z" fill="url(#igloo-gradient)" stroke="#d3f5fb" stroke-width="4" />
+                            <path d="M78 359c40 9 132 9 172 0M92 332c34 10 108 10 145 0M119 308c28 8 75 8 105 0" fill="none" stroke="#78abc8" stroke-width="3" opacity="0.72" />
+                            <path d="M123 379v-39a41 39 0 0 1 82 0v39z" fill="#31516f" stroke="#d9f6fa" stroke-width="4" />
+                            <path d="M132 377v-36a32 31 0 0 1 64 0v36z" fill="#101f35" />
+                            <ellipse class="igloo-glow" cx="164" cy="354" rx="64" ry="47" fill="url(#igloo-light)" />
+                            <path d="M86 383h157" stroke="#efffff" stroke-width="4" stroke-linecap="round" />
+                        </g>
+
+                        <ellipse cx="307" cy="421" rx="64" ry="15" fill="#d5f2f7" opacity="0.9" />
+                        <ellipse cx="307" cy="420" rx="55" ry="11" fill="#173a5d" stroke="#f3ffff" stroke-width="2" />
+                        <g class="ice-fish">
+                            <path d="M297 420c5-5 12-5 17 0-5 5-12 5-17 0zm17 0 7-5v10z" fill="#72d2e7" />
+                            <circle cx="301" cy="419" r="1.3" fill="#17304c" />
+                        </g>
+                        <path d="M286 417v4q0 4 4 4m37-8v4q0 4-4 4" fill="none" stroke="#d7f5ff" stroke-width="1.8" stroke-linecap="round" />
+                        <circle class="fishing-bobber" cx="286" cy="412" r="4" fill="#ff9e74" stroke="#fff0d6" stroke-width="1.5" />
+                        <circle class="fishing-bobber fishing-bobber-secondary" cx="327" cy="412" r="4" fill="#73e1d3" stroke="#e2ffff" stroke-width="1.5" />
+
+                        <ellipse cx="437" cy="389" rx="54" ry="10" fill="#173b5b" opacity="0.32" />
+                        <g class="fishing-line-second">
+                            <path d="M363 207C358 270 342 354 327 408" fill="none" stroke="#d6f5ff" stroke-width="1.5" opacity="0.92" />
+                        </g>
+                        <g transform="translate(868 0) scale(-1 1)">
+                            <g class="penguin-fisher-second">
+                            <path d="M397 333c-19-4-31-18-34-37 19 6 31 15 41 30z" fill="#17243a" />
+                            <ellipse cx="434" cy="326" rx="48" ry="61" fill="#17243a" />
+                            <ellipse cx="441" cy="333" rx="31" ry="45" fill="#f5f8f5" />
+                            <ellipse cx="434" cy="247" rx="44" ry="40" fill="#17243a" />
+                            <ellipse cx="440" cy="254" rx="33" ry="28" fill="#f5f8f5" />
+                            <ellipse cx="428" cy="246" rx="5" ry="7" fill="#ffffff" />
+                            <ellipse cx="450" cy="246" rx="5" ry="7" fill="#ffffff" />
+                            <circle cx="430" cy="248" r="3.2" fill="#17243a" />
+                            <circle cx="452" cy="248" r="3.2" fill="#17243a" />
+                            <circle cx="431" cy="246.5" r="1.2" fill="#ffffff" />
+                            <circle cx="453" cy="246.5" r="1.2" fill="#ffffff" />
+                            <path d="M438 257l19 3-16 11z" fill="#f2a83b" stroke="#d7802d" stroke-width="1.5" stroke-linejoin="round" />
+                            <path d="M397 282c23 13 51 14 76 1l-3 17c-21 14-52 13-74-1z" fill="#36b9ad" />
+                            <path d="M404 296c-2 19-8 29-24 38l15 7c18-12 25-26 24-41z" fill="#71d5c9" />
+                            <path d="M399 308c-11 11-22 15-33 15m109-19c11 9 21 11 31 8" fill="none" stroke="#17243a" stroke-width="14" stroke-linecap="round" />
+                            <path d="M407 381c-9 6-19 10-31 9-7 0-9 5-4 9 12 7 27 3 40-5m42-13c9 6 18 10 30 9 7 0 9 5 4 9-12 7-27 3-40-5" fill="#f2a83b" stroke="#d7802d" stroke-width="2" stroke-linejoin="round" />
+                            </g>
+                        </g>
+                        <g class="fishing-rod-second">
+                            <path d="M389 317Q377 267 363 207" fill="none" stroke="#714f45" stroke-width="4" stroke-linecap="round" />
+                            <path d="M389 317Q377 267 363 207" fill="none" stroke="#e9c9a0" stroke-width="1.2" stroke-linecap="round" opacity="0.8" />
+                        </g>
+
+                        <g class="penguin-fisher">
+                            <ellipse cx="277" cy="389" rx="31" ry="8" fill="#173b5b" opacity="0.32" />
+                            <path d="M252 365c-12-5-21-18-22-31 13 3 23 10 29 21z" fill="#17243a" />
+                            <ellipse cx="267" cy="350" rx="25" ry="34" fill="#17243a" />
+                            <ellipse cx="271" cy="354" rx="16" ry="25" fill="#f5f8f5" />
+                            <ellipse cx="267" cy="311" rx="23" ry="22" fill="#17243a" />
+                            <ellipse cx="271" cy="316" rx="17" ry="15" fill="#f5f8f5" />
+                            <ellipse cx="265" cy="310" rx="3.5" ry="5" fill="#ffffff" />
+                            <ellipse cx="277" cy="310" rx="3.5" ry="5" fill="#ffffff" />
+                            <circle cx="266" cy="311" r="2.2" fill="#17243a" />
+                            <circle cx="278" cy="311" r="2.2" fill="#17243a" />
+                            <circle cx="266.7" cy="310" r="0.9" fill="#ffffff" />
+                            <circle cx="278.7" cy="310" r="0.9" fill="#ffffff" />
+                            <path d="M271 317l14 3-12 7z" fill="#f2a83b" stroke="#d7802d" stroke-width="1.2" stroke-linejoin="round" />
+                            <path d="M246 335c13 7 28 8 42 1l-2 12c-12 8-30 7-42 0z" fill="#e67865" />
+                            <path d="M250 342c-8 9-14 15-24 18l9 5c12-5 20-13 22-21z" fill="#f08b70" />
+                            <path d="M250 350c-10 2-17 0-23-6m57 5c6-1 10-4 14-9" fill="none" stroke="#17243a" stroke-width="8" stroke-linecap="round" />
+                            <path d="M252 380c-7 4-13 8-23 7-5 0-7 4-3 7 9 5 20 2 29-3m23-11c7 4 13 7 21 6 5 0 7 4 3 7-8 5-19 2-27-3" fill="#f2a83b" stroke="#d7802d" stroke-width="1.5" stroke-linejoin="round" />
+                        </g>
+                        <g class="fishing-rod">
+                            <path d="M286 348Q299 289 310 224" fill="none" stroke="#714f45" stroke-width="4" stroke-linecap="round" />
+                            <path d="M286 348Q299 289 310 224" fill="none" stroke="#e9c9a0" stroke-width="1.2" stroke-linecap="round" opacity="0.8" />
+                            <path d="M310 224C315 280 300 352 286 408" fill="none" stroke="#d6f5ff" stroke-width="1.5" opacity="0.9" />
+                        </g>
+                    </svg>
+                    <canvas class="winter-snow" aria-hidden="true"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-pt="Sobre Mim" data-en="About Me" data-es="Sobre Mí">Sobre Mim</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p data-pt="Tenho mais de 10 anos de experiência em Tecnologia da Informação. Minha trajetória inclui 7 anos dedicados à infraestrutura de TI e ao suporte, com atuação voltada à sustentação dos ambientes, às necessidades dos usuários e à resolução de problemas operacionais." data-en="I have over 10 years of experience in Information Technology. My background includes 7 years dedicated to IT infrastructure and support, maintaining environments, supporting user needs, and resolving operational issues." data-es="Tengo más de 10 años de experiencia en Tecnología de la Información. Mi trayectoria incluye 7 años dedicados a la infraestructura de TI y al soporte, manteniendo entornos, atendiendo las necesidades de los usuarios y resolviendo problemas operativos.">
+                        Tenho mais de 10 anos de experiência em Tecnologia da Informação. Minha trajetória inclui 7 anos dedicados à infraestrutura de TI e ao suporte, com atuação voltada à sustentação dos ambientes, às necessidades dos usuários e à resolução de problemas operacionais.
+                    </p>
+                    <p data-pt="Há 6 anos atuo como Engenheiro DevOps, conectando essa experiência de infraestrutura à automação de processos. Trabalho com cloud, CI/CD, infraestrutura como código, monitoramento e práticas de DevSecOps para apoiar ambientes mais confiáveis, observáveis e eficientes." data-en="For 6 years, I have worked as a DevOps Engineer, connecting my infrastructure background with process automation. I work with cloud, CI/CD, infrastructure as code, monitoring, and DevSecOps practices to support more reliable, observable, and efficient environments." data-es="Desde hace 6 años trabajo como Ingeniero DevOps, conectando mi experiencia en infraestructura con la automatización de procesos. Trabajo con cloud, CI/CD, infraestructura como código, monitoreo y prácticas DevSecOps para impulsar entornos más confiables, observables y eficientes.">
+                        Há 6 anos atuo como Engenheiro DevOps, conectando essa experiência de infraestrutura à automação de processos. Trabalho com cloud, CI/CD, infraestrutura como código, monitoramento e práticas de DevSecOps para apoiar ambientes mais confiáveis, observáveis e eficientes.
+                    </p>
+                    <p data-pt="Gosto de aproximar desenvolvimento e operações: investigar causas, simplificar rotinas e colaborar com equipes para que mudanças cheguem à produção de forma segura e sustentável. Valorizo a comunicação clara, a responsabilidade e a melhoria contínua." data-en="I enjoy bringing development and operations closer: investigating root causes, simplifying routines, and collaborating with teams so changes reach production safely and sustainably. I value clear communication, accountability, and continuous improvement." data-es="Me gusta acercar desarrollo y operaciones: investigar causas, simplificar rutinas y colaborar con los equipos para que los cambios lleguen a producción de forma segura y sostenible. Valoro la comunicación clara, la responsabilidad y la mejora continua.">
+                        Gosto de aproximar desenvolvimento e operações: investigar causas, simplificar rotinas e colaborar com equipes para que mudanças cheguem à produção de forma segura e sustentável. Valorizo a comunicação clara, a responsabilidade e a melhoria contínua.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <h3>10+</h3>
+                            <p data-pt="Anos em TI" data-en="Years in IT" data-es="Años en TI">Anos em TI</p>
+                        </div>
+                        <div class="stat">
+                            <h3>7+</h3>
+                            <p data-pt="Anos em Infraestrutura e Suporte" data-en="Years in Infrastructure & Support" data-es="Años en Infraestructura y Soporte">Anos em Infraestrutura e Suporte</p>
+                        </div>
+                        <div class="stat">
+                            <h3>6+</h3>
+                            <p data-pt="Anos como DevOps Engineer" data-en="Years as a DevOps Engineer" data-es="Años como DevOps Engineer">Anos como DevOps Engineer</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title" data-pt="Habilidades" data-en="Skills" data-es="Habilidades">Habilidades</h2>
+
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 data-pt="Plataformas Cloud" data-en="Cloud Platforms" data-es="Plataformas Cloud">Plataformas Cloud</h3>
+                    <div class="skill-list">
+                        <span class="skill-name"><img class="skill-logo aws-logo" src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="" aria-hidden="true" loading="lazy">AWS</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" alt="" aria-hidden="true" loading="lazy">Azure</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" alt="" aria-hidden="true" loading="lazy">GCP</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-pt="CI/CD e Automação" data-en="CI/CD & Automation" data-es="CI/CD y Automatización">CI/CD e Automação</h3>
+                    <div class="skill-list">
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/jenkins/D24939" alt="" aria-hidden="true" loading="lazy">Jenkins</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/gitlab/FC6D26" alt="" aria-hidden="true" loading="lazy">GitLab CI/CD</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/githubactions/2088FF" alt="" aria-hidden="true" loading="lazy">GitHub Actions</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/terraform/844FBA" alt="" aria-hidden="true" loading="lazy">Terraform</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/ansible/EE0000" alt="" aria-hidden="true" loading="lazy">Ansible</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-pt="Monitoramento e Observabilidade" data-en="Monitoring & Observability" data-es="Monitoreo y Observabilidad">Monitoramento e Observabilidade</h3>
+                    <div class="skill-list">
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/prometheus/E6522C" alt="" aria-hidden="true" loading="lazy">Prometheus</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/grafana/F46800" alt="" aria-hidden="true" loading="lazy">Grafana</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-pt="DevSecOps" data-en="DevSecOps" data-es="DevSecOps">DevSecOps</h3>
+                    <div class="skill-list">
+                        <span class="skill-name" data-pt="Hardening de sistemas" data-en="System hardening" data-es="Hardening de sistemas">Hardening de sistemas</span>
+                        <span class="skill-name" data-pt="Segurança no código (Secure Coding)" data-en="Secure coding" data-es="Seguridad en el código">Segurança no código (Secure Coding)</span>
+                        <span class="skill-name" data-pt="Testes de segurança (SAST/DAST)" data-en="Security testing (SAST/DAST)" data-es="Pruebas de seguridad (SAST/DAST)">Testes de segurança (SAST/DAST)</span>
+                        <span class="skill-name" data-pt="Segurança em pipelines CI/CD" data-en="CI/CD pipeline security" data-es="Seguridad en pipelines CI/CD">Segurança em pipelines CI/CD</span>
+                        <span class="skill-name" data-pt="Gestão de vulnerabilidades e segredos" data-en="Vulnerability and secrets management" data-es="Gestión de vulnerabilidades y secretos">Gestão de vulnerabilidades e segredos</span>
+                        <span class="skill-name" data-pt="IAM e controle de acesso" data-en="IAM & access control" data-es="IAM y control de acceso">IAM e controle de acesso</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-pt="Web e Proxy Reverso" data-en="Web & Reverse Proxy" data-es="Web y Proxy Inverso">Web e Proxy Reverso</h3>
+                    <div class="skill-list">
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/nginx/009639" alt="" aria-hidden="true" loading="lazy">Nginx</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/apache/CA1F26" alt="" aria-hidden="true" loading="lazy">Apache httpd</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 data-pt="Linguagens e Scripting" data-en="Programming & Scripting" data-es="Programación y Scripting">Linguagens e Scripting</h3>
+                    <div class="skill-list">
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/gnubash/4EAA25" alt="" aria-hidden="true" loading="lazy">Shell Script</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/python/3776AB" alt="" aria-hidden="true" loading="lazy">Python</span>
+                        <span class="skill-name"><img class="skill-logo" src="https://cdn.simpleicons.org/go/00ADD8" alt="" aria-hidden="true" loading="lazy">Golang</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications and Professional Skills Section -->
+    <section id="credentials" class="credentials">
+        <div class="container">
+            <h2 class="section-title" data-pt="Certificações e Competências" data-en="Certifications & Competencies" data-es="Certificaciones y Competencias">Certificações e Competências</h2>
+
+            <div class="credentials-grid">
+                <article class="credential-card certification-card">
+                    <div class="certification-logo aws-cert-logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS">
+                    </div>
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p data-pt="Certificação de fundamentos de cloud e serviços da AWS." data-en="Foundational certification in cloud concepts and AWS services." data-es="Certificación fundamental en conceptos de cloud y servicios de AWS.">Certificação de fundamentos de cloud e serviços da AWS.</p>
+                </article>
+                <article class="credential-card certification-card">
+                    <div class="certification-logo cisco-cert-logo">
+                        <img src="https://cdn.simpleicons.org/cisco/1BA0D7" alt="Cisco">
+                    </div>
+                    <h3>Cisco IT Essentials</h3>
+                    <p data-pt="Fundamentos de hardware, sistemas operacionais, redes e suporte técnico." data-en="Foundations of hardware, operating systems, networking, and technical support." data-es="Fundamentos de hardware, sistemas operativos, redes y soporte técnico.">Fundamentos de hardware, sistemas operacionais, redes e suporte técnico.</p>
+                </article>
+                <article class="credential-card">
+                    <h3 data-pt="Competências profissionais" data-en="Professional skills" data-es="Competencias profesionales">Competências profissionais</h3>
+                    <ul class="competency-list">
+                        <li data-pt="Comunicação clara" data-en="Clear communication" data-es="Comunicación clara">Comunicação clara</li>
+                        <li data-pt="Colaboração entre equipes" data-en="Cross-functional collaboration" data-es="Colaboración entre equipos">Colaboração entre equipes</li>
+                        <li data-pt="Resolução de problemas" data-en="Problem-solving" data-es="Resolución de problemas">Resolução de problemas</li>
+                        <li data-pt="Organização e senso de responsabilidade" data-en="Organization and accountability" data-es="Organización y responsabilidad">Organização e senso de responsabilidade</li>
+                        <li data-pt="Adaptabilidade e melhoria contínua" data-en="Adaptability and continuous improvement" data-es="Adaptabilidad y mejora continua">Adaptabilidade e melhoria contínua</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title" data-pt="Entre em Contato" data-en="Get In Touch" data-es="Ponte en Contacto">Entre em Contato</h2>
+
+            <div class="contact-content">
+                <div class="contact-text">
+                    <p data-pt="Tem um projeto em mente? Gostaria de colaborar? Envie uma mensagem e entrarei em contato dentro de 24 horas." data-en="Have a project in mind? Want to collaborate? Send me a message and I'll get back to you within 24 hours." data-es="¿Tienes un proyecto en mente? ¿Quieres colaborar? Envíame un mensaje y me pondré en contacto en 24 horas.">
+                        Tem um projeto em mente? Gostaria de colaborar? Envie uma mensagem e entrarei em contato dentro de 24 horas.
+                    </p>
+
+                    <div class="contact-links">
+                        <a href="https://linkedin.com" class="contact-link">
+                            <span class="contact-icon">💼</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com" class="contact-link">
+                            <span class="contact-icon">🐙</span>
+                            <span>GitHub</span>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Seu Nome" class="form-input" data-pt="Seu Nome" data-en="Your Name" data-es="Tu Nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="Seu Email" class="form-input" data-pt="Seu Email" data-en="Your Email" data-es="Tu Correo" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" placeholder="Assunto" class="form-input" data-pt="Assunto" data-en="Subject" data-es="Asunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Sua Mensagem" class="form-textarea" data-pt="Sua Mensagem" data-en="Your Message" data-es="Tu Mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" data-pt="Enviar Mensagem" data-en="Send Message" data-es="Enviar Mensaje">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p data-pt="© 2027 Portfólio de Felipe França. Todos os direitos reservados." data-en="© 2027 Felipe França Portfolio. All rights reserved." data-es="© 2027 Portafolio de Felipe França. Todos los derechos reservados.">
+                © 2027 Portfólio de Felipe França. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
